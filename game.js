@@ -122,12 +122,14 @@ $(document).ready(function() {
       domEvt: function() {
         //$(document).keypress(function() {
         document.addEventListener('keypress', domHandler);
+        document.addEventListener('touchstart',domHandler);
       }
     };
 
     var rmvEvtListener = {
       domEvt: function() {
         document.removeEventListener('keypress',domHandler);
+        document.removeEventListener('touchstart',domHandler);
       },
       btnEvt: function() {
         //$(btnClass).off();
